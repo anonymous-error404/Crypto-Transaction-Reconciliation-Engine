@@ -4,7 +4,7 @@ import {
   getReportSummary,
   getUnmatchedEntries,
   exportReportAsCSV
-} from '../../services/matching.service.js';
+} from '../services/matching.service.js';
 
 export const triggerReconciliation = async (req, res) => {
   try {
