@@ -102,7 +102,7 @@ node index.js
 
 ### Ingestion
 
-#### `POST /api/v1/ingest`
+#### `POST /api/ingest`
 
 Upload both CSV files to parse, validate, and store in the database.
 
@@ -129,7 +129,7 @@ Upload both CSV files to parse, validate, and store in the database.
 
 ### Reconciliation
 
-#### `POST /api/v1/reconcile`
+#### `POST /api/reconciliation/reconcile`
 
 Trigger a reconciliation run. Optionally override tolerances in the request body.
 
@@ -160,13 +160,13 @@ Trigger a reconciliation run. Optionally override tolerances in the request body
 
 ---
 
-#### `GET /api/v1/report/:runId`
+#### `GET /api/reconciliation/report/:runId`
 
 Fetch the full reconciliation report for a run including all entries.
 
 ---
 
-#### `GET /api/v1/report/:runId/summary`
+#### `GET /api/reconciliation/report/:runId/summary`
 
 Fetch just the counts — matched, conflicting, unmatched.
 
@@ -195,13 +195,13 @@ Fetch just the counts — matched, conflicting, unmatched.
 
 ---
 
-#### `GET /api/v1/report/:runId/unmatched`
+#### `GET /api/reconciliation/report/:runId/unmatched`
 
 Fetch only unmatched entries with reasons.
 
 ---
 
-#### `GET /api/v1/report/:runId/export`
+#### `GET /api/reconciliation/report/:runId/export`
 
 Download the full report as a CSV file.
 
