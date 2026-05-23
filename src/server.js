@@ -16,7 +16,7 @@ app.use(express.json());
 
 await databaseConnection();
 app.use("/api/", ingestionRoutes);
-app.use("/api/reconciliation", reconcilationRoutes);
+app.use("/api/", reconcilationRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
