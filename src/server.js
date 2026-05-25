@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 await databaseConnection();
-app.use("/api/", ingestionRoutes);
+app.use("/api", ingestionRoutes);
 app.use("/api/reconciliation", reconcilationRoutes);
 
 app.listen(PORT, () => {
