@@ -8,8 +8,7 @@
     "node": ">=20.19.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "gcp-build": "npm install --omit=dev"
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
